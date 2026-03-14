@@ -4,13 +4,24 @@
     "jsx": "preserve",
     "allowJs": false,
     "incremental": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    },
     "plugins": [
       {
         "name": "next"
       }
-    ]
+    ],
+    "noEmit": true,
+    "strictNullChecks": true
   },
-  "include": ["next-env.d.ts", "src/**/*", ".next/types/**/*.ts"],
+  "include": [
+    "next-env.d.ts",
+    "app/**/*",
+    "src/**/*",
+    ".next/types/**/*.ts"
+  ],
   "exclude": ["node_modules"]
 }
 // {
